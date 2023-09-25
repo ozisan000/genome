@@ -18,10 +18,7 @@ namespace Genome {
     let cmdCntMax = 5
 
     /**
-     * TODO: describe your function here
-     * @param n describe parameter here, eg: 5
-     * @param s describe parameter here, eg: "Hello"
-     * @param e describe parameter here
+     * TODO: コマンドが何回実行されたか調べる
      */
     //% block
     function CommandCheck(): boolean {
@@ -46,12 +43,10 @@ namespace Genome {
     }
 
     /**
-     * TODO: describe your function here
-     * @param value describe value here, eg: 5
+     * TODO: 空間を開ける
      */
     //% block
     export function Space() {
-
         if (xPos > xPosMax || CommandCheck()) {
             return
         }
@@ -60,17 +55,17 @@ namespace Genome {
     }
 
     /**
-     * TODO: describe your function here
-     * @param n describe parameter here, eg: 5
-     * @param s describe parameter here, eg: "Hello"
-     * @param e describe parameter here
+     * TODO: DNAブロックを設置する
+     * @param num 何回ループさせるかどうか, num: 1
      */
     //% block
     export function GenomeSet(num: number = 1) {
+        //コマンドの実行回数をチェック
         if (CommandCheck()) {
             return
         }
 
+        //ループでDNAブロックを設置する
         for (let i = 0; i < num; i++) {
             if (xPos <= xPosMax) {
                 blocks.place(HONEYCOMB_BLOCK, world(xPos, 1, 24))

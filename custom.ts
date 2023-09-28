@@ -8,7 +8,7 @@
  * Genome
  */
 //% weight=100 color=#0fbc11 icon=""
-namespace projectleaf {
+namespace genomeanalysis {
     let xPos = -9
     //  デバッグ用座標
     let xPosMax = -2

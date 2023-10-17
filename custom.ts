@@ -7,7 +7,7 @@
 /**
  * Genome
  */
-//% weight=100 color=#0fbc11 icon=""
+//% weight=100 color=#ffa500 icon="ξ"
 namespace genomeanalysis {
     let xPos = -9
     //  デバッグ用座標

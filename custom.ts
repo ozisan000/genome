@@ -50,7 +50,8 @@ namespace genomeanalysis {
         if (xPos > xPosMax || CommandCheck()) {
             return
         }
-        blocks.place(AIR, world(xPos, 1, 24))
+        let placePos = world(xPos, 1, 24)
+        blocks.fill(AIR, placePos, placePos,FillOperation.Replace)
         xPos += 1
     }
 
@@ -68,7 +69,8 @@ namespace genomeanalysis {
         //ループでDNAブロックを設置する
         for (let i = 0; i < num; i++) {
             if (xPos <= xPosMax) {
-                blocks.place(HONEYCOMB_BLOCK, world(xPos, 1, 24))
+                let placePos = world(xPos, 1, 24)
+                blocks.fill(HONEYCOMB_BLOCK, placePos, placePos, FillOperation.Replace)
                 xPos += 1
             } else {
                 return

@@ -57,10 +57,10 @@ namespace genomeanalysis {
 
     /**
      * TODO: DNAブロックを設置する
-     * @param num 何回ループさせるかどうか, num: 1
+     * @param num 何回ループさせるかどうか
      */
     //% block
-    export function GenomeSet(num: number = 1) {
+    export function GenomeSet(num = 1) {
         //コマンドの実行回数をチェック
         if (CommandCheck()) {
             return

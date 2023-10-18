@@ -43,7 +43,7 @@ namespace genomeanalysis {
     }
 
     /**
-     * TODO: 空間を開ける
+     * TODO: 空間を空ける
      */
     //% block
     export function Space() {

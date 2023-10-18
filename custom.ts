@@ -50,7 +50,7 @@ namespace genomeanalysis {
         if (xPos > xPosMax || CommandCheck()) {
             return
         }
-        let placePos = world(xPos, 1, 24)
+        let placePos = world(xPos - 1, 1, 24)
         blocks.fill(AIR, placePos, placePos,FillOperation.Replace)
         xPos += 1
     }
@@ -60,16 +60,16 @@ namespace genomeanalysis {
      * @param num 何回ループさせるかどうか
      */
     //% block
-    export function GenomeSet(num = 1) {
+    export function GenomeSet(loop = 1) {
         //コマンドの実行回数をチェック
         if (CommandCheck()) {
             return
         }
 
         //ループでDNAブロックを設置する
-        for (let i = 0; i < num; i++) {
+        for (let i = 0; i < loop; i++) {
             if (xPos <= xPosMax) {
-                let placePos = world(xPos, 1, 24)
+                let placePos = world(xPos - 1, 1, 24)
                 blocks.fill(HONEYCOMB_BLOCK, placePos, placePos, FillOperation.Replace)
                 xPos += 1
             } else {
